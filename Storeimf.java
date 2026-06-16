@@ -26,7 +26,7 @@ public class Storeimf {
         try( FileWriter file = new FileWriter(name, true);
         BufferedWriter bw = new BufferedWriter(file)){
 
-            bw.write(this.time + " | "+ " Score " + this.Score +  "/10 "+ " | "+ " Strength " + this.strength + " | "+ " Breach: " + this.ISbreach);
+            bw.write(this.time + " | "+ " Score " + this.Score +  "/10 "+ " | "+ " Strength " + this.strength + " | "+ " Breach: " + this.isBreach);
             bw.newLine();
 
 

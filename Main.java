@@ -9,6 +9,7 @@ public class Main {
         int total;
         boolean Found;
         String bre;
+        String str;
 
         System.out.println("************************");
         System.out.println("Welcome to password analyzer");
@@ -52,8 +53,7 @@ public class Main {
             System.out.println("Total points " + total);
 
 
-            String str;
-
+            
         if(total >= 8){
 
             str = "Very strong";
