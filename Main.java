@@ -9,7 +9,7 @@ public class Main {
         int total;
         boolean Found;
         String bre;
-        String str;
+        String str = "weak";
 
         System.out.println("************************");
         System.out.println("Welcome to password analyzer");
@@ -38,14 +38,14 @@ public class Main {
 
             if(Breachpoints == 4){
 
-                Found = true;
+                Found = false;
 
                 System.out.println("Password was not found in breaches list");
 
             }
 
             else{
-                Found = false;
+                Found = true;
 
                 System.out.println("Password was found in breached list");
             }
@@ -78,15 +78,15 @@ public class Main {
             } 
             LocalDateTime dateTime = LocalDateTime.now(); 
 
-            System.out.println(dateTime);
+            
 
             if(Found){
-                bre = "NO";
+                bre = "YES";
             }
 
             else{
 
-                bre = "YES";
+                bre = "NO";
             }
             Storeimf Store = new Storeimf(dateTime, total, str,bre );
 
