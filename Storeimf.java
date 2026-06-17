@@ -3,6 +3,7 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Storeimf {
 
@@ -21,12 +22,16 @@ public class Storeimf {
     
        void file(){
 
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+         String formattedTime = this.time.format(formatter);
+
+
         String name = "C:\\Users\\user\\OneDrive\\Documents\\store log.txt";
 
         try( FileWriter file = new FileWriter(name, true);
         BufferedWriter bw = new BufferedWriter(file)){
 
-            bw.write(this.time + " | "+ " Score " + this.Score +  "/10 "+ " | "+ " Strength " + this.strength + " | "+ " Breach: " + this.isBreach);
+            bw.write(formattedTime + " | "+ " Score " + this.Score +  "/10 "+ " | "+ " Strength " + this.strength + " | "+ " Breach: " + this.isBreach);
             bw.newLine();
 
 
